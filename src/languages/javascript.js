@@ -84,7 +84,7 @@ function(hljs) {
         begin: /[{,]\s*/, relevance: 0,
         contains: [
           {
-            begin: IDENT_RE + '\\s*:', returnBegin: true,
+            begin: IDENT_RE + '\\s*(:|(\\(\\s*\\)))', returnBegin: true,
             relevance: 0,
             contains: [{className: 'attr', begin: IDENT_RE, relevance: 0}]
           }
